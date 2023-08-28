@@ -2,6 +2,12 @@
 
 This repository contains a Task Management App API built using FastAPI and SQLite as the database. The API provides endpoints to manage tasks including creating, retrieving, updating, and deleting tasks.
 
+## Project Requirements
+
+- Python 3.9+
+- sqlite
+- FastAPI
+
 ## Project Setup
 
 1. **Clone the Repository:**
@@ -187,6 +193,9 @@ You can use swagger UI to:
 
 A suite of `tests` using the pytest framework was used to help verify the functionality of the Task Management App API.
 
+**Note:** This tests uses `todo.db` in the root folder to avoid conflicts between prod and test database.
+To set up, create atleast 10 tasks in the `app/todo.db` and copy the file to the root folder
+
 ### Running the tests
 
 1. Navigate to the `tests` directory within your project using a terminal:
@@ -212,3 +221,11 @@ To view the API documentation using ReDoc, Open your web browser and navigate to
 ```bash
 http://localhost:8000/redoc
 ```
+
+## References
+
+1. [FastAPI](https://fastapi.tiangolo.com/)
+2. [pytest](https://docs.pytest.org/en/)
+3. [SwaggerUI](https://swagger.io/tools/swagger-ui/)
+4. [ReDoc](https://redocly.com/redoc/)
+5. [SQLite](https://www.sqlite.org/)
