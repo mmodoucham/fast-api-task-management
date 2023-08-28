@@ -1,7 +1,6 @@
 # app/test/test_tasks.py
 from fastapi.testclient import TestClient
 from app.main import app
-import json
 client = TestClient(app)
 
 
