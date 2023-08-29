@@ -39,7 +39,7 @@ The API will be accesible on **`http://localhost:8000`**.
 
 ### Get All Tasks
 
-- **Endpoint:** **`/tasks/`**
+- **Endpoint:** **`/api/tasks/`**
 - **Method:** GET
 - **Response:**
 
@@ -61,17 +61,16 @@ The API will be accesible on **`http://localhost:8000`**.
 
 ### Create Task
 
-- **Endpoint:** **`/tasks/`**
+- **Endpoint:** **`/api/tasks/`**
 - **Method:** POST
 - **Request:**
 
 ```json
 {
-  "parameter": {
-    "title": "New Task",
-    "description": "A new task",
-    "dueDate": "2019-08-24T14:15:22Z"
-  }
+  "id": 0,
+  "title": "string",
+  "description": "string",
+  "dueDate": "2023-08-29T15:51:12.999Z"
 }
 ```
 
@@ -82,17 +81,17 @@ The API will be accesible on **`http://localhost:8000`**.
   "code": "success",
   "status": 201,
   "response": {
-    "id": 5,
-    "title": "New Task",
-    "description": "A new task",
-    "dueDate": "2019-08-24T14:15:22Z"
+    "id": 0,
+    "title": "string",
+    "description": "string",
+    "dueDate": "2023-08-29T15:51:12.999000Z"
   }
 }
 ```
 
 ### Get Task by ID
 
-- **Endpoint:** **`/tasks/{task_id}`**
+- **Endpoint:** **`/api/tasks/{task_id}`**
 - **Method:** GET
 - **Response:**
 
@@ -102,26 +101,25 @@ The API will be accesible on **`http://localhost:8000`**.
   "status": 200,
   "response": {
     "id": 1,
-    "title": "Sample Task",
-    "description": "This is a sample task",
-    "dueDate": "2019-08-24T14:15:22Z"
+    "title": "string",
+    "description": "string",
+    "dueDate": "2023-08-28T22:26:23.434000Z"
   }
 }
 ```
 
 ### Update Task
 
-- **Endpoint:** **`/tasks/`**
+- **Endpoint:** **`/api/tasks/{task_id}`**
 - **Method:**
 - **Request:**
 
 ```json
 {
-  "parameter": {
-    "title": "Updated Task",
-    "description": "An updated task",
-    "dueDate": "2019-08-24T14:15:22Z"
-  }
+  "id": 1,
+  "title": "Updated Task",
+  "description": "string",
+  "dueDate": "2023-08-29T15:51:12.999Z"
 }
 ```
 
@@ -134,15 +132,15 @@ The API will be accesible on **`http://localhost:8000`**.
   "response": {
     "id": 1,
     "title": "Updated Task",
-    "description": "An updated task",
-    "dueDate": "2019-08-24T14:15:22Z"
+    "description": "string",
+    "dueDate": "2023-08-29T15:51:12.999000Z"
   }
 }
 ```
 
 ### Delete Task
 
-- **Endpoint:** **`/tasks/`**
+- **Endpoint:** **`/api/tasks/`**
 - **Method:** DELETE
 - **Response:**
 
